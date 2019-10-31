@@ -45,7 +45,7 @@ contributor_zip <- rbind(contributor_zip1,contributor_zip2)
 recipient <- rbind(recipient1,recipient2)
 donation <- rbind(donation1,donation2)
 
-MA_donor <- dbConnect(SQLite(), "/Users/tsuyu/Downloads/workspace/MA_donor.db")
+MA_donor <- dbConnect(SQLite(), "MA_donor.db")
 dbWriteTable(conn = MA_donor, value = contributor, name = "contributor")
 dbWriteTable(conn = MA_donor, value = contributor_zip, name = "contributor_zip")
 dbWriteTable(conn = MA_donor, value = recipient, name = "recipient")
